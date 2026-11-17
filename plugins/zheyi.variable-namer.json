@@ -1,6 +1,12 @@
 {
   "id": "zheyi.variable-namer",
-  "repository": "https://github.com/Jazzzy126/fuyu-variable-namer",
+  "repo": "Jazzzy126/fuyu-variable-namer",
+  "publisher": "Jazzzy126",
+  "categories": [
+    "developer",
+    "utilities"
+  ],
+  "buildStep": true,
   "signingKeys": [
     {
       "keyId": "4323c36a7eaec614",
