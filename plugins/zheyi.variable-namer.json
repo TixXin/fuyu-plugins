@@ -1,0 +1,16 @@
+{
+  "id": "zheyi.variable-namer",
+  "repo": "Jazzzy126/fuyu-variable-namer",
+  "publisher": "Jazzzy126",
+  "categories": [
+    "developer",
+    "utilities"
+  ],
+  "buildStep": true,
+  "signingKeys": [
+    {
+      "keyId": "4323c36a7eaec614",
+      "publicKey": "P46L6WryyrxqsbIVsfx/CfmgKhZqpoxGZKpo2cxJQDc="
+    }
+  ]
+}
