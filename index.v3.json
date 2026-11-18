@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1794986296,
-  "generatedAt": "2026-11-18T07:18:16Z",
-  "expires": "2026-11-25T07:18:16Z",
+  "serial": 1794989380,
+  "generatedAt": "2026-11-18T08:09:40Z",
+  "expires": "2026-11-25T08:09:40Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -276,6 +276,78 @@
           "icon": {
             "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.github-issues@1.0.0/fuyu-github-issues-1.0.0.icon.svg",
             "sha256": "1e5aec9ba1b2bef3d8b06022296ebff7bbf240f7c77c73cacd2f4bf8e84b5a47"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@fuyu/launcher",
+      "publisher": {
+        "github": "TixXin",
+        "official": true
+      },
+      "authorKeys": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "5cce750504fd8f78b15ddd10e8e0891cafcf9ada",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.launcher@1.0.0/fuyu-launcher-1.0.0.fuyu",
+          "sha256": "67b2fffb8ca462022251c53404c49bb5853f735871e224dc34e1815de43e766b",
+          "size": 14352,
+          "publishedAt": "2026-11-18T08:09:40Z",
+          "reviewedAt": "2026-11-18T08:08:55Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "应用启动台",
+              "en": "App Launcher"
+            },
+            "description": {
+              "zh-CN": "在岛上搜索并快速启动本机应用，支持大小写不敏感子串与首字母缩写过滤、键盘上下选择与最近启动置顶。",
+              "en": "Search and launch installed apps from the island with case-insensitive substring and acronym matching, keyboard navigation, and recent-apps ranking."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "fs",
+              "os",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "rescan",
+                "title": {
+                  "zh-CN": "重新扫描应用",
+                  "en": "Rescan applications"
+                }
+              }
+            ],
+            "categories": [
+              "productivity",
+              "utilities"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.launcher@1.0.0/fuyu-launcher-1.0.0.icon.svg",
+            "sha256": "ef481ab1a81be1da9c2e1731d778a2f88fcf5564476d524b7720671b70eb4914"
           }
         }
       ]
