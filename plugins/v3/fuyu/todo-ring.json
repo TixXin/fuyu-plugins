@@ -1,0 +1,11 @@
+{
+  "name": "@fuyu/todo-ring",
+  "path": "plugins/v3/official/todo-ring",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "repository": "https://github.com/TixXin/fuyu",
+      "commit": "9a2f6ce762ad01e14073b181741002f811518717"
+    }
+  ]
+}
