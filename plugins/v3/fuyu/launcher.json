@@ -1,0 +1,11 @@
+{
+  "name": "@fuyu/launcher",
+  "path": "plugins/v3/official/launcher",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "repository": "https://github.com/TixXin/fuyu",
+      "commit": "5cce750504fd8f78b15ddd10e8e0891cafcf9ada"
+    }
+  ]
+}
