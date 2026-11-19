@@ -140,6 +140,8 @@ PR 会自动检查：
 
 ---
 
+套装（`bundles/<id>.json`，市场页上「一次装上几个」的那一行）由维护者维护，目前只收官方插件，不接受第三方提交；想推荐一组搭配，开 issue 说明。
+
 ## English summary
 
 1. Build your plugin with `npm create fuyu-plugin@latest`, check it with `npx fuyu-plugin validate`, and pack it with `npx fuyu-plugin pack`.
@@ -153,6 +155,8 @@ PR 会自动检查：
 5. New versions: just publish a new release. The index is rebuilt on a schedule that GitHub runs every few hours rather than every hour (sometimes over 10), and islands check the market every 6 hours, so expect about half a day. Updates that ask for new permissions, add a webview page, change the runtime or do not match the source at their tag wait for a maintainer, who approves them with `"approved": "<version>"`.
 
 v3 plugins (`@scope/name`, `.fuyu` packages) need no release of your own: run `npx fuyu-plugin keygen` once, push the version to your repository (dependencies only from registry.npmjs.org, locked by `package-lock.json`; the market runs `npm ci --ignore-scripts`), run `npx fuyu-plugin sign --commit <sha>`, and open a pull request that adds its `version`, `repository`, `commit` and `authorSignature` as one line of `versions` in `plugins/v3/<scope>/<name>.json` (scope = the lowercase owner of the repository, which you must own). The check builds that commit with pinned tools and no secrets, compares it with the last listed version and posts a green, yellow or red report; red is never listed. Once a maintainer approves and merges, the market rebuilds it, publishes it to this repository's releases and signs `index.v3.json`; islands update to it by themselves 3 days later.
+
+Bundles (`bundles/<id>.json`, the sets the market page installs in one go) are kept by the maintainers and hold only official plugins for now; they are not open to submissions. To suggest one, open an issue.
 
 ## 提交主题 / Submit a theme
 
