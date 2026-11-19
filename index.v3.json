@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795089746,
-  "generatedAt": "2026-11-19T12:02:26Z",
-  "expires": "2026-11-26T12:02:26Z",
+  "serial": 1795092941,
+  "generatedAt": "2026-11-19T12:55:41Z",
+  "expires": "2026-11-26T12:55:41Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -837,6 +837,70 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.1.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "a8696e60e56784a68cb814fb4c6dc97d05d87240",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.world-clock@1.1.0/fuyu-world-clock-1.1.0.fuyu",
+          "sha256": "4fc5ea92eed78c768b3a88453acf5f8e4425a139d9bda4515eb0a406a4544664",
+          "size": 65863,
+          "publishedAt": "2026-11-19T12:55:41Z",
+          "reviewedAt": "2026-11-19T12:54:45Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "世界时钟",
+              "en": "World clock"
+            },
+            "description": {
+              "zh-CN": "同时看几个城市的时间和时差，跨时区约会议不用再算。",
+              "en": "See the time and offset in several cities at once, so scheduling across time zones takes no maths."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "crypto",
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "utilities",
+              "information"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.world-clock@1.1.0/fuyu-world-clock-1.1.0.icon.svg",
+            "sha256": "878b654df398d2db42a7fdee7dd7bc89211b4f8ed7051e08993c9bfcd9c95a1c"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.world-clock@1.1.0/fuyu-world-clock-1.1.0.screenshot-1.png",
+              "sha256": "61e00168ef1cf4f8d3386da549e69a1329153f306b85adea46cb53eaf8803530",
+              "caption": {
+                "zh-CN": "岛上页面：几个城市的时间和时差",
+                "en": "Island page: times and offsets in several cities"
+              }
+            }
+          ]
+        },
         {
           "version": "1.0.0",
           "repository": "https://github.com/TixXin/fuyu",
