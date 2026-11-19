@@ -44,6 +44,7 @@ export function versionEntry(listing, { repo, tag, publishedAt, reviewedAt }) {
     ...(listing.screenshots?.length
       ? { screenshots: listing.screenshots.map((shot) => ({ url: url(shot.file), sha256: shot.sha256, ...(shot.caption ? { caption: shot.caption } : {}) })) }
       : {}),
+    ...(listing.docs && Object.keys(listing.docs).length > 0 ? { docs: listing.docs } : {}),
   };
 }
 
