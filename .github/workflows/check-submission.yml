@@ -4,8 +4,8 @@
 # "check" covers the v2 market and themes and runs the tests. The v3 jobs:
 #   v3-plan    checks the changed plugins/v3/<scope>/<name>.json files, author
 #              signatures (official plugins: the commit is on TixXin/fuyu's
-#              protected main), who may change what, revoked.v3.json and the
-#              trust root, and lists the versions to build
+#              protected main), who may change what, bundles/<id>.json,
+#              revoked.v3.json and the trust root, and lists the versions to build
 #   v3-build   one job per version, treated as running hostile code: no secrets,
 #              read-only token, the author's commit fetched by id, dependencies
 #              from the npm registry without install scripts, built with the

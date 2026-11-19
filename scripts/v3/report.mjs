@@ -11,6 +11,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { MARKER } from "./comment.mjs";
+import { bundleFiles } from "./lib/bundles.mjs";
 import { INDEX_FILE } from "./lib/documents.mjs";
 import { assembleIndex, ephemeralTrust, indexText, releaseTag, signIndex, versionEntry } from "./lib/market-index.mjs";
 import { validSubmissions } from "./lib/submission.mjs";
@@ -59,7 +60,7 @@ export function rehearseIndex(root, listings, { now = Date.now(), repo = "TixXin
   const released = new Map(
     listings.map((listing) => [`${listing.name}@${listing.version}`, versionEntry(listing, { repo, tag: releaseTag(listing.name, listing.version), publishedAt, reviewedAt: publishedAt })]),
   );
-  const { doc, pending } = assembleIndex({ submissions: validSubmissions(root), previous, released, now });
+  const { doc, pending } = assembleIndex({ submissions: validSubmissions(root), previous, released, now, bundles: bundleFiles(root) });
   const { privateKey, trust } = ephemeralTrust();
   const { keyId } = signIndex(indexText(doc), privateKey, trust, { lastSerial: previous?.serial ?? null, now });
   return { keyId, plugins: doc.plugins.length, versions: doc.plugins.reduce((sum, plugin) => sum + plugin.versions.length, 0), pending };

@@ -8,7 +8,8 @@
 #            keeps it out
 #   release  may write releases, runs no plugin code: checks the build's files against
 #            their hashes, publishes one release per version (.fuyu, icon, screenshots),
-#            checks the public addresses and assembles the unsigned index
+#            checks the public addresses and assembles the unsigned index, with the
+#            bundles of bundles/ whose plugins are all listed
 #   sign     the "release" environment's FUYU_INDEX_V3_SIGNING_KEY; installs nothing and
 #            loads only @fuyu/plugin-market, gets only the assembled index.v3.json
 #   push     the "ci-push" environment's deploy key, the one thing that may push to main
@@ -24,6 +25,7 @@ on:
     branches: [main]
     paths:
       - "plugins/v3/**"
+      - "bundles/**"
       - "revoked.v3.json"
       - "revoked.v3.json.sig"
       - "keys/trusted.v3.json"

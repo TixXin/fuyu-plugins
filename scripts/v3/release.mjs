@@ -15,6 +15,7 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, statSync, writeFil
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
+import { bundleFiles } from "./lib/bundles.mjs";
 import { INDEX_FILE, currentRevoked, readTrust } from "./lib/documents.mjs";
 import { sha256File } from "./lib/listing.mjs";
 import { assembleIndex, downloadUrl, indexText, isoSeconds, releaseTag, versionEntry } from "./lib/market-index.mjs";
@@ -110,7 +111,8 @@ export async function releaseAll({ plan, buildsDir, repo, target, runId, rehears
   const trust = readTrust(root);
   const revoked = currentRevoked(root, trust);
   const previous = readJson(path.join(root, INDEX_FILE));
-  const { doc, pending } = assembleIndex({ submissions: validSubmissions(root), previous, released, now, revokedSerial: revoked?.serial ?? null });
+  const { doc, pending, bundleProblems } = assembleIndex({ submissions: validSubmissions(root), previous, released, now, revokedSerial: revoked?.serial ?? null, bundles: bundleFiles(root) });
+  failed.push(...bundleProblems);
   return { doc, released: [...released.keys()], failed, pending };
 }
 
@@ -136,6 +138,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   writeFileSync(path.join(values.out, "release.json"), `${JSON.stringify({ released: result.released, failed: result.failed, pending: result.pending, planErrors: plan.errors }, null, 2)}\n`);
   const summary = [
     `### index.v3.json: serial ${result.doc.serial}, expires ${result.doc.expires}`,
+    ...(result.doc.bundles ?? []).map((bundle) => `- Bundle ${bundle.id}: ${bundle.plugins.join(", ")}`),
     ...result.released.map((key) => `- Released ${key}`),
     ...result.failed.map((line) => `- ❌ ${line}`),
     ...plan.errors.map((line) => `- ❌ ${line}`),

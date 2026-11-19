@@ -1,6 +1,6 @@
 // Decides which plugin versions to build, and checks everything that needs no
 // build: submission files, author signatures, who may change what, official
-// commits, revoked.v3.json and the trust root.
+// commits, bundles, revoked.v3.json and the trust root.
 //
 //   node scripts/v3/plan.mjs --mode pr --out <dir>       a pull request (BASE_SHA, PR_AUTHOR, AUTHOR_ASSOCIATION)
 //   node scripts/v3/plan.mjs --mode publish --out <dir>  the branch as it is: versions not yet in index.v3.json
@@ -11,6 +11,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { api } from "../lib/github.mjs";
+import { BUNDLES_DIR, BUNDLE_FILE_PATTERN, listedBundles } from "./lib/bundles.mjs";
 import { INDEX_FILE, REVOKED_FILE, TRUST_FILE, parseTrust, revokedChangeProblems, signatureFile, trustProblems } from "./lib/documents.mjs";
 import { changedFiles, fileAt, firstAddedAt } from "./lib/git.mjs";
 import { onProtectedMain } from "./lib/official.mjs";
@@ -94,6 +95,27 @@ export async function planPullRequest(root, { base, author, association, request
     notes.push({ name: (after ?? before)?.name ?? file, lines: compared.notes });
     if (after && own.length === 0) {
       for (const line of compared.added) builds.push(buildEntry(after, line, previousOf(line.version, after.versions), {}));
+    }
+  }
+
+  const bundleChanges = changes.filter(({ file }) => file.startsWith(`${BUNDLES_DIR}/`));
+  if (bundleChanges.length > 0) {
+    const listed = new Set((parse(fileAt(base, INDEX_FILE, root), INDEX_FILE, errors)?.plugins ?? []).map((plugin) => plugin.name));
+    for (const { status, file } of bundleChanges) {
+      if (!BUNDLE_FILE_PATTERN.test(file)) errors.push(`${file}: bundles go in ${BUNDLES_DIR}/<id>.json.`);
+      else if (!maintainer) errors.push(`${file}: only maintainers may change bundles.`);
+      else if (status === "D") notes.push({ name: file, lines: ["Removed: islands stop offering this bundle; what it installed stays."] });
+      else {
+        const checked = listedBundles([{ file, text: readFileSync(path.join(root, file), "utf8") }], listed);
+        errors.push(...checked.problems);
+        const [bundle] = checked.bundles;
+        if (bundle) {
+          notes.push({
+            name: file,
+            lines: [`Bundle of ${bundle.plugins.length} listed plugins: ${bundle.plugins.join(", ")}.`, ...(bundle.onboarding ? ["Recommended in the first-run guide."] : [])],
+          });
+        }
+      }
     }
   }
 

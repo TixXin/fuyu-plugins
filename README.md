@@ -20,6 +20,7 @@ keys/trusted.json          岛屿信任的签名公钥（与岛屿仓库的 plug
 scripts/                   索引构建、PR 检查、签名
 
 plugins/v3/<作用域>/<名字>.json   第 3 版插件的提交：每个版本一行（版本、仓库、提交号、作者签名）
+bundles/<id>.json          套装：几个已上架的插件，岛屿的市场页可以一次装上（只由维护者增删，目前只收 @fuyu 官方插件）
 index.v3.json / .sig       第 3 版索引：CI 从提交号构建、发到本仓库 Releases 后生成并签名，不接受手工修改
 revoked.v3.json / .sig     第 3 版撤销名单：维护者在自己电脑上用离线的撤销密钥签好再开 PR
 keys/trusted.v3.json       第 3 版信任根：索引密钥、撤销密钥两组，同一把不能两边都在（与岛屿编进去的一致）

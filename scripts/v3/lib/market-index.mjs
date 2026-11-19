@@ -3,6 +3,7 @@
 // hash, publish time) carry over from the previous index, so a listed version
 // never changes; only "urgent" follows what the maintainers currently say.
 import { generateKeyPairSync } from "node:crypto";
+import { listedBundles } from "./bundles.mjs";
 import { loadMarket } from "./tools.mjs";
 import { OFFICIAL_REPOSITORY, compareVersions, isOfficialName, ownerOf, parseName } from "./submission.mjs";
 
@@ -51,10 +52,12 @@ export function versionEntry(listing, { repo, tag, publishedAt, reviewedAt }) {
 /**
  * index.v3.json from the submissions (each already valid), the previous index and
  * the versions released in this run (Map "name@version" → entry). Versions that
- * are neither are left out and returned in `pending`. Throws when the result does
- * not pass the island's own validation.
+ * are neither are left out and returned in `pending`. `bundles` are the bundle
+ * files ({ file, text }); one with a problem is left out and reported in
+ * `bundleProblems`, and with none listed the index has no "bundles" at all.
+ * Throws when the result does not pass the island's own validation.
  */
-export function assembleIndex({ submissions, previous = null, released = new Map(), now = Date.now(), revokedSerial = null }) {
+export function assembleIndex({ submissions, previous = null, released = new Map(), now = Date.now(), revokedSerial = null, bundles = [] }) {
   const before = new Map((previous?.plugins ?? []).map((plugin) => [plugin.name, plugin]));
   const plugins = [];
   const pending = [];
@@ -83,6 +86,7 @@ export function assembleIndex({ submissions, previous = null, released = new Map
       versions,
     });
   }
+  const chosen = listedBundles(bundles, new Set(plugins.map((plugin) => plugin.name)));
   const doc = {
     format: market.FORMAT,
     serial: Math.max(Math.floor(now / 1000), (previous?.serial ?? 0) + 1),
@@ -90,10 +94,11 @@ export function assembleIndex({ submissions, previous = null, released = new Map
     expires: isoSeconds(now + LIFETIME_DAYS * DAY_MS),
     ...(revokedSerial == null ? {} : { revokedSerial }),
     plugins,
+    ...(chosen.bundles.length > 0 ? { bundles: chosen.bundles } : {}),
   };
   const problems = market.validateIndex(doc);
   if (problems.length > 0) throw new Error(`the assembled index is not valid:\n${problems.map((item) => `${item.path} ${item.message}`).join("\n")}`);
-  return { doc, pending };
+  return { doc, pending, bundleProblems: chosen.problems };
 }
 
 export const indexText = (doc) => `${JSON.stringify(doc, null, 2)}\n`;
