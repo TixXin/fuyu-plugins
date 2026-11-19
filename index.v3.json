@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795124408,
-  "generatedAt": "2026-11-19T21:40:08Z",
-  "expires": "2026-11-26T21:40:08Z",
+  "serial": 1795125875,
+  "generatedAt": "2026-11-19T22:04:35Z",
+  "expires": "2026-11-26T22:04:35Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -2546,6 +2546,25 @@
           }
         }
       ]
+    }
+  ],
+  "bundles": [
+    {
+      "id": "pomodoro-flow",
+      "displayName": {
+        "zh-CN": "番茄工作法",
+        "en": "Pomodoro flow"
+      },
+      "description": {
+        "zh-CN": "番茄钟专注计时，圆环显示今天的待办进度，收工前把没做完的待办记进笔记",
+        "en": "A pomodoro timer for focus, a ring for today's to-do progress, and a wrap-up of unfinished to-dos in your notes"
+      },
+      "plugins": [
+        "@fuyu/pomodoro",
+        "@fuyu/todo-ring",
+        "@fuyu/todo-digest"
+      ],
+      "onboarding": true
     }
   ]
 }
