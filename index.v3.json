@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795095515,
-  "generatedAt": "2026-11-19T13:38:35Z",
-  "expires": "2026-11-26T13:38:35Z",
+  "serial": 1795123002,
+  "generatedAt": "2026-11-19T21:16:42Z",
+  "expires": "2026-11-26T21:16:42Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -535,6 +535,78 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.2.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "d64adae889ee4d882700610288d3630ca43038eb",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.now-playing@1.2.0/fuyu-now-playing-1.2.0.fuyu",
+          "sha256": "49a14a5fc012bcb92b4b86d3cba82f238225673d43947b2adb9d3340068fcc3c",
+          "size": 38268,
+          "publishedAt": "2026-11-19T21:16:42Z",
+          "reviewedAt": "2026-11-19T21:15:28Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "换歌提示",
+              "en": "Track change notice"
+            },
+            "description": {
+              "zh-CN": "换歌时在岛上弹一下歌名和歌手，不用切过去看。",
+              "en": "Shows the song title and artist on the island when the track changes."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "commands",
+                "media/v1",
+                "messages/v1"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "show",
+                "title": {
+                  "zh-CN": "立即提示当前歌曲",
+                  "en": "Show the current song"
+                }
+              }
+            ],
+            "categories": [
+              "media"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.now-playing@1.2.0/fuyu-now-playing-1.2.0.icon.svg",
+            "sha256": "d19e2c82fddb9bdff03abdb8251e0c897ad5b7fe3a07ed89895302ee9f0ec3c7"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.now-playing@1.2.0/fuyu-now-playing-1.2.0.screenshot-1.png",
+              "sha256": "519ed116a98e99602d7e29ca37a9854e2303e5a4557c418dfa7ea8990412b683",
+              "caption": {
+                "zh-CN": "换歌时岛上弹出的提示：封面、歌名、歌手和播放软件，带上一首、暂停、下一首",
+                "en": "The notice on the island when the track changes: cover, title, artist and player, with previous, pause and next"
+              }
+            }
+          ]
+        },
         {
           "version": "1.1.0",
           "repository": "https://github.com/TixXin/fuyu",
