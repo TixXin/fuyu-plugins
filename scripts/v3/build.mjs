@@ -14,7 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { scanFolder } from "../lib/secrets.mjs";
-import { extractAssets, fileBase, manifestSummary, platformsOf } from "./lib/listing.mjs";
+import { docHashes, extractAssets, fileBase, manifestSummary, platformsOf } from "./lib/listing.mjs";
 import { prepareSource } from "./lib/source.mjs";
 import { buildConfig, loadCli, toolsPin } from "./lib/tools.mjs";
 
@@ -102,6 +102,7 @@ export async function buildVersion(entry, { out, work, config = buildConfig() })
       manifest: manifestSummary(built),
       icon: assets.icon,
       screenshots: assets.screenshots,
+      docs: docHashes(packed.outDir),
       tier: report.tier,
       builtWith: built.fuyu?.builtWith ?? null,
       tools: toolsPin().commit,

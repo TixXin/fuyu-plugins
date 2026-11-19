@@ -34,6 +34,7 @@ test("a clean first release and a poisoned update go through build, review, rele
   assert.deepEqual(listing.platforms, ["windows", "macos"]);
   assert.deepEqual(listing.manifest.network, ["api.open-meteo.com"]);
   assert.equal(listing.icon.file, "tixxin-market-ci-demo-1.0.0.icon.svg");
+  assert.equal(typeof listing.docs, "object");
   assert.equal(verifiedFiles(path.join(out, "b0"), listing).length, 2);
 
   const update = await buildVersion(builds[1], { out, work: tempDir() });
@@ -98,6 +99,7 @@ test("an assembled index keeps listed versions as they were and follows the main
     manifest: { displayName: { "zh-CN": "演示", en: "Demo" }, description: { "zh-CN": "演示", en: "Demo" }, license: "MIT", nodeApis: [], network: [], inject: { required: [], optional: [] }, provides: [], replaces: [], slots: [], commands: [] },
     icon: { file: `x-${version}.icon.svg`, sha256: "2".repeat(64) },
     screenshots: [],
+    ...(version === "1.0.0" ? { docs: { "README.md": "3".repeat(64) } } : { docs: {} }),
   });
   const a = "a".repeat(40);
   const b = "b".repeat(40);
@@ -115,6 +117,8 @@ test("an assembled index keeps listed versions as they were and follows the main
   assert.equal(doc.expires, "2026-11-22T00:00:00Z");
   assert.deepEqual(doc.plugins[0].versions[0].urgent, urgent);
   assert.equal(doc.plugins[0].versions[0].publishedAt, "2026-11-01T00:00:00Z");
+  assert.deepEqual(doc.plugins[0].versions[0].docs, { "README.md": "3".repeat(64) });
+  assert.equal("docs" in versionEntry(listing("1.1.0", b), { repo, tag: releaseTag(DEMO, "1.1.0"), publishedAt: "2026-11-02T00:00:00Z" }), false);
 
   const moved = [{ ...versionLine(privateKey, { version: "1.0.0", commit: b }) }];
   assert.throws(() => assembleIndex({ submissions: [{ name: DEMO, authorKeys: [key], versions: moved }], previous, now }), /is listed from/);
