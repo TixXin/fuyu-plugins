@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795085000,
-  "generatedAt": "2026-11-19T10:43:20Z",
-  "expires": "2026-11-26T10:43:20Z",
+  "serial": 1795089746,
+  "generatedAt": "2026-11-19T12:02:26Z",
+  "expires": "2026-11-26T12:02:26Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -513,6 +513,61 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.1.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "a60262500b5e636fa7a5bfa0c5481b1dcded96ba",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.system-monitor@1.1.0/fuyu-system-monitor-1.1.0.fuyu",
+          "sha256": "211aebef70dd3f15cb4511b04cdb3ae80ca659c89b9964d2855998587ab0f7bb",
+          "size": 39403,
+          "publishedAt": "2026-11-19T12:02:26Z",
+          "reviewedAt": "2026-11-19T12:01:32Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "系统监控",
+              "en": "System monitor"
+            },
+            "description": {
+              "zh-CN": "在岛上看 CPU、GPU、内存、网速、电池和最占资源的程序，带 5 分钟曲线；收起条读数偏高变黄、过高变红。会运行系统自带的程序取数（Windows 上是 PowerShell，Mac 上是 vm_stat、ps 等），不联网。",
+              "en": "CPU, GPU, memory, network, battery and the busiest programs on the island, with 5-minute charts; the collapsed bar turns yellow or red when readings run high. Runs built-in system programs to read them (PowerShell on Windows; vm_stat, ps and others on Mac), with no network access."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "fs",
+              "os",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "utilities",
+              "information"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.system-monitor@1.1.0/fuyu-system-monitor-1.1.0.icon.svg",
+            "sha256": "db874e1f97b44747a41d2c2ad3399fc7e9b914e3621e66e045381f9004057b14"
+          }
+        },
         {
           "version": "1.0.0",
           "repository": "https://github.com/TixXin/fuyu",
