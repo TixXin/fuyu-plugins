@@ -6,6 +6,11 @@
       "version": "1.0.0",
       "repository": "https://github.com/TixXin/fuyu",
       "commit": "58eb47cdaf7876634e965baeb16cd7e669057b06"
+    },
+    {
+      "version": "1.1.0",
+      "repository": "https://github.com/TixXin/fuyu",
+      "commit": "8f14e37adc2ad2a495262beb3a35c7c51fdc71ee"
     }
   ]
 }
