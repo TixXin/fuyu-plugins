@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795125875,
-  "generatedAt": "2026-11-19T22:04:35Z",
-  "expires": "2026-11-26T22:04:35Z",
+  "serial": 1795159548,
+  "generatedAt": "2026-11-20T07:25:48Z",
+  "expires": "2026-11-27T07:25:48Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -1252,6 +1252,121 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.2.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "0e6b20b4c71ce0ca4b0665978c8f9368f0f64ec8",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.pomodoro@1.2.0/fuyu-pomodoro-1.2.0.fuyu",
+          "sha256": "1ac42ba88f2a8be23d8fbf8bb29c048ac41e9eacb43f388a09c09c2ece621bd4",
+          "size": 56632,
+          "publishedAt": "2026-11-20T07:25:48Z",
+          "reviewedAt": "2026-11-20T07:24:50Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "番茄钟",
+              "en": "Pomodoro"
+            },
+            "description": {
+              "zh-CN": "挑一条待办开始专注，岛上倒计时，到点提醒你休息，记下今天完成了几轮。",
+              "en": "Pick a to-do and focus; the island counts down, tells you when to take a break, and counts today's rounds."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "commands",
+                "timers/v1",
+                "todos/v1",
+                "messages/v1"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "start",
+                "title": {
+                  "zh-CN": "开始番茄钟",
+                  "en": "Start pomodoro"
+                },
+                "keybinding": "Ctrl+Alt+P"
+              },
+              {
+                "id": "stop",
+                "title": {
+                  "zh-CN": "停止番茄钟",
+                  "en": "Stop pomodoro"
+                }
+              },
+              {
+                "id": "pause",
+                "title": {
+                  "zh-CN": "暂停 / 继续番茄钟",
+                  "en": "Pause or resume pomodoro"
+                }
+              }
+            ],
+            "categories": [
+              "productivity",
+              "todos"
+            ],
+            "keywords": [
+              "番茄钟",
+              "番茄工作法",
+              "专注",
+              "计时",
+              "休息",
+              "pomodoro",
+              "focus",
+              "timer",
+              "break",
+              "tomato"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.pomodoro@1.2.0/fuyu-pomodoro-1.2.0.icon.svg",
+            "sha256": "db275630b469c32c4b3d340c630120c7d22371b1a6637bb2b5d860c20d48730c"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.pomodoro@1.2.0/fuyu-pomodoro-1.2.0.screenshot-1.png",
+              "sha256": "1918fd2b7754b5f095c6d0bbfff76b51b8881d6aab02f2f822c0bd5d0a0e9cf5",
+              "caption": {
+                "zh-CN": "岛上页面：倒计时和今天的轮数",
+                "en": "Island page: countdown and today's rounds"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.pomodoro@1.2.0/fuyu-pomodoro-1.2.0.screenshot-2.png",
+              "sha256": "707ed391486037e3dba75abf45c266bb9a01bc69f946f21d6e2b373380297842",
+              "caption": {
+                "zh-CN": "收起条：剩余时间",
+                "en": "Collapsed bar: time left"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "b0f5def6622c7aa54c1bdfca59e0c2e9f36af6608dc319c42cb33c8790284834",
+            "README.md": "ca1e9c13c07487e5bf1788d5652c15c851da74d02d8e47e6dbe660a8daee6954"
+          }
+        },
         {
           "version": "1.1.1",
           "repository": "https://github.com/TixXin/fuyu",
