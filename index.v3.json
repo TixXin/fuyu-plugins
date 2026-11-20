@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795170345,
-  "generatedAt": "2026-11-20T10:25:45Z",
-  "expires": "2026-11-27T10:25:45Z",
+  "serial": 1795172212,
+  "generatedAt": "2026-11-20T10:56:52Z",
+  "expires": "2026-11-27T10:56:52Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -295,6 +295,109 @@
           "icon": {
             "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.alarm@1.0.0/fuyu-alarm-1.0.0.icon.svg",
             "sha256": "0d7904018f044e87606e3a7a6b69877691ce770bbdab05c38dde84b81434c993"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@fuyu/calculator",
+      "publisher": {
+        "github": "TixXin",
+        "official": true
+      },
+      "authorKeys": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "58eb47cdaf7876634e965baeb16cd7e669057b06",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.calculator@1.0.0/fuyu-calculator-1.0.0.fuyu",
+          "sha256": "2db39e0ca572c15bcbbd8d197f7573d7e37751ad9e1eb0551e7b7c23f200d7d7",
+          "size": 156335,
+          "publishedAt": "2026-11-20T10:56:52Z",
+          "reviewedAt": "2026-11-20T10:56:01Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "全能计算器",
+              "en": "Calculator"
+            },
+            "description": {
+              "zh-CN": "岛上的全能计算器：算式、汇率、长度面积体积重量等单位换算、日期、进制、大写数字、个税、房贷、亲戚称呼和 BMI。",
+              "en": "Expressions, exchange rates, units, dates, number bases, income tax, mortgages, kinship terms and BMI."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [
+              "open.er-api.com"
+            ],
+            "inject": {
+              "required": [],
+              "optional": [
+                "island"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "open",
+                "title": {
+                  "zh-CN": "打开计算器",
+                  "en": "Open Calculator"
+                }
+              }
+            ],
+            "categories": [
+              "utilities",
+              "productivity"
+            ],
+            "keywords": [
+              "计算器",
+              "汇率",
+              "单位换算",
+              "个税",
+              "房贷",
+              "亲戚称呼",
+              "大写数字",
+              "进制转换",
+              "calculator",
+              "currency",
+              "unit converter",
+              "mortgage",
+              "BMI"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.calculator@1.0.0/fuyu-calculator-1.0.0.icon.svg",
+            "sha256": "d69f4e55667d27f465db61cb06d4eb9ed7828a90df04f64a623aef2f4b300992"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.calculator@1.0.0/fuyu-calculator-1.0.0.screenshot-1.png",
+              "sha256": "04247798e41b3c73684880d8d8f1434eab79ea8fa83a40df1fbbc9746fa7af99",
+              "caption": {
+                "zh-CN": "岛上页面：左边选分类，右边算",
+                "en": "Island page: pick a category on the left, work it out on the right"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "da1c50a56f51bde7a60d71b1dd1a5124cb1dce845a591f93511a746b65f56810",
+            "README.md": "3a5b5d9b166506778ab23049645edf134639753a00606c7915554c3da26e8116"
           }
         }
       ]
