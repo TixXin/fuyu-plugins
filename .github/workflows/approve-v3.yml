@@ -1,0 +1,58 @@
+# Approves a collaborator's routine update of their own listed plugin once its
+# check passed, so they can merge it themselves: green against the last listed
+# version, from the same repository and key, nothing but their own submission
+# files changed. First listings, yellow reviews and anything else wait for a
+# maintainer. The rules are in scripts/v3/approve.mjs.
+#
+# Runs the default branch's code with a token that may review, on the check run's
+# artifacts. Needs "Allow GitHub Actions to create and approve pull requests" in
+# the repository's Actions settings, and the main ruleset dismissing stale
+# approvals on push, so the approval covers only the commit that was checked.
+name: Approve routine v3 updates
+
+on:
+  workflow_run:
+    workflows: ["Check submission"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  approve:
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: v3-report
+          path: ${{ runner.temp }}/v3-report
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: v3-plan
+          path: ${{ runner.temp }}/v3-plan
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          pattern: v3-build-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/v3-builds
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Approve
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: node scripts/v3/approve.mjs --plan "$RUNNER_TEMP/v3-plan/plan.json" --builds "$RUNNER_TEMP/v3-builds" --pr-file "$RUNNER_TEMP/v3-report/pr.json" --head-sha "$HEAD_SHA"

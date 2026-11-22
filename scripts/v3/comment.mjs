@@ -18,7 +18,7 @@ export const MARKER = "<!-- fuyu-market-v3-report -->";
 const SUBMISSION_PATHS = /^(plugins|themes)\//;
 const BOT = "github-actions[bot]";
 
-async function all(request, url) {
+export async function all(request, url) {
   const items = [];
   for (let page = 1; page <= 30; page += 1) {
     const { status, body } = await request(`${url}${url.includes("?") ? "&" : "?"}per_page=100&page=${page}`);
