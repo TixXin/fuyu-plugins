@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795336387,
-  "generatedAt": "2026-11-22T08:33:07Z",
-  "expires": "2026-11-29T08:33:07Z",
+  "serial": 1795336708,
+  "generatedAt": "2026-11-22T08:38:28Z",
+  "expires": "2026-11-29T08:38:28Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -2854,6 +2854,213 @@
           "icon": {
             "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.world-clock@1.0.0/fuyu-world-clock-1.0.0.icon.svg",
             "sha256": "878b654df398d2db42a7fdee7dd7bc89211b4f8ed7051e08993c9bfcd9c95a1c"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@shenglin1001/battery",
+      "publisher": {
+        "github": "ShengLin1001",
+        "official": false
+      },
+      "authorKeys": [
+        {
+          "keyId": "71b7ee8d10079fe7",
+          "publicKey": "5kE88xs/aKG3HHpy8/Y32xrrl2VxpRHb8w7pNqaL8IE="
+        }
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/ShengLin1001/fuyu-plugin",
+          "commit": "7ef4cda06b73e41db29fb940d6dfd16c1e7be2c8",
+          "engines": {
+            "fuyu": ">=0.3.11"
+          },
+          "platforms": [
+            "windows"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.battery@1.0.0/shenglin1001-battery-1.0.0.fuyu",
+          "sha256": "5766f725ecfdaaaaaeb2dd7dd0c7d789dbcd8e6dd3e1212d869ae88d24a1a0e2",
+          "size": 63378,
+          "publishedAt": "2026-11-22T08:38:28Z",
+          "reviewedAt": "2026-11-22T08:37:34Z",
+          "authorSignature": {
+            "keyId": "71b7ee8d10079fe7",
+            "signature": "ll7uQsyDxue+3zBGI3y/YV3NRrvTtw7kERMESgqeO85J1UFZ/+Mq/loS1diKg4Mv3UKk5duZlB9soE6StTRgDQ=="
+          },
+          "manifest": {
+            "displayName": {
+              "zh-CN": "电量",
+              "en": "Battery"
+            },
+            "description": {
+              "zh-CN": "在岛上查看这台电脑和蓝牙设备的电量。",
+              "en": "See this PC’s battery and Bluetooth device levels on the island."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "path",
+              "readline",
+              "url"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "clients"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "utilities",
+              "information"
+            ],
+            "keywords": [
+              "电量",
+              "电池",
+              "蓝牙",
+              "battery",
+              "bluetooth",
+              "airpods"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.battery@1.0.0/shenglin1001-battery-1.0.0.icon.svg",
+            "sha256": "5a495878e1879441a6af448670b5de0ea900fb9e14bace0e832675deb7774fd3"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.battery@1.0.0/shenglin1001-battery-1.0.0.screenshot-1.png",
+              "sha256": "7e80d5a69d36e562c652a9f389548613a9ae7681e9d075afcb4895bf709d43ce",
+              "caption": {
+                "zh-CN": "电量页面：本机、已连接设备和上次读数",
+                "en": "Battery page: this PC, connected devices, and last known levels"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.battery@1.0.0/shenglin1001-battery-1.0.0.screenshot-2.png",
+              "sha256": "47327bed641351d205a055a74484af518b49a1a9702713aeebcbd055dedeec58",
+              "caption": {
+                "zh-CN": "收起条：并排的电池读数",
+                "en": "Collapsed bar: battery levels at a glance"
+              }
+            }
+          ],
+          "docs": {
+            "README.md": "65f607152fb6e8123bbf08c2f45ff890af72591e033b41eda8c95929c38b5d6e"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@shenglin1001/timesync",
+      "publisher": {
+        "github": "ShengLin1001",
+        "official": false
+      },
+      "authorKeys": [
+        {
+          "keyId": "71b7ee8d10079fe7",
+          "publicKey": "5kE88xs/aKG3HHpy8/Y32xrrl2VxpRHb8w7pNqaL8IE="
+        }
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/ShengLin1001/fuyu-plugin",
+          "commit": "7ef4cda06b73e41db29fb940d6dfd16c1e7be2c8",
+          "engines": {
+            "fuyu": ">=0.3.11"
+          },
+          "platforms": [
+            "windows"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.timesync@1.0.0/shenglin1001-timesync-1.0.0.fuyu",
+          "sha256": "d582c0dc5becf3e5eafa15257411f87315f5afcc253aa4e8c6dd1722cad6f64b",
+          "size": 71704,
+          "publishedAt": "2026-11-22T08:38:28Z",
+          "reviewedAt": "2026-11-22T08:37:41Z",
+          "authorSignature": {
+            "keyId": "71b7ee8d10079fe7",
+            "signature": "F3tOnCusJ6/AabRcZ29AtVe+ByOYP/+i5rUykURT6B+mGieNSvjZoEGHcNtTREoPdb1/3l6wLrxqv/jt0WuEDw=="
+          },
+          "manifest": {
+            "displayName": {
+              "zh-CN": "校时",
+              "en": "Time sync"
+            },
+            "description": {
+              "zh-CN": "查看时钟偏差，在 Windows 上校时并固定时区。",
+              "en": "Check clock drift, resync the Windows clock, and keep a fixed time zone."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "dgram",
+              "dns",
+              "path",
+              "url"
+            ],
+            "network": [
+              "time.windows.com"
+            ],
+            "inject": {
+              "required": [
+                "clients",
+                "commands",
+                "config",
+                "messages/v1"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1"
+            ],
+            "commands": [
+              {
+                "id": "resync",
+                "title": {
+                  "zh-CN": "立即校时",
+                  "en": "Sync now"
+                }
+              }
+            ],
+            "categories": [
+              "utilities"
+            ],
+            "keywords": [
+              "校时",
+              "Time sync",
+              "timesync"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.timesync@1.0.0/shenglin1001-timesync-1.0.0.icon.svg",
+            "sha256": "57a39aaa07ee291a81e79d0f515ff0a84b2d5804c1ad582b49cfd0a0dacd1e4d"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.timesync@1.0.0/shenglin1001-timesync-1.0.0.screenshot-1.png",
+              "sha256": "7d6c156852e5d595118a6c31f7b20686790afa0c058714e52200807c3a37d7b8",
+              "caption": {
+                "zh-CN": "校时状态、任务和固定时区",
+                "en": "Clock offset, resync task and fixed time zone"
+              }
+            }
+          ],
+          "docs": {
+            "README.md": "0080b3a03b9e1924d44dfe2f5317bfa0715d5c0f9c5a4f7273ae73fcb25559ce"
           }
         }
       ]
