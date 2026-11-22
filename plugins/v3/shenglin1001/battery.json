@@ -1,0 +1,21 @@
+{
+  "name": "@shenglin1001/battery",
+  "path": "v3/battery",
+  "authorKeys": [
+    {
+      "keyId": "71b7ee8d10079fe7",
+      "publicKey": "5kE88xs/aKG3HHpy8/Y32xrrl2VxpRHb8w7pNqaL8IE="
+    }
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "repository": "https://github.com/ShengLin1001/fuyu-plugin",
+      "commit": "7ef4cda06b73e41db29fb940d6dfd16c1e7be2c8",
+      "authorSignature": {
+        "keyId": "71b7ee8d10079fe7",
+        "signature": "ll7uQsyDxue+3zBGI3y/YV3NRrvTtw7kERMESgqeO85J1UFZ/+Mq/loS1diKg4Mv3UKk5duZlB9soE6StTRgDQ=="
+      }
+    }
+  ]
+}
