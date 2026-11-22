@@ -16,6 +16,15 @@
         "keyId": "71b7ee8d10079fe7",
         "signature": "oXw5im3PxrrAbkEvWldCH81y220MANbUcBwzDEdCH8ofeHildlPXxbSKo2QAvdjT6o2GOCvkWsrp7gcMcONMDA=="
       }
+    },
+    {
+      "version": "1.0.1",
+      "repository": "https://github.com/ShengLin1001/fuyu-plugin",
+      "commit": "ee70d84a9660302a6e32e2156067a734a5f70c80",
+      "authorSignature": {
+        "keyId": "71b7ee8d10079fe7",
+        "signature": "i1jktpKrLiVAWpFIZN4qQtdjejBRHKCZ0xBPKUdGZEzrIQVbrcHBPDXR3kRGCA+DezMv5ky/0LnWGQOwHcsKDQ=="
+      }
     }
   ]
 }
