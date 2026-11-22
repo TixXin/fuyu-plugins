@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795336708,
-  "generatedAt": "2026-11-22T08:38:28Z",
-  "expires": "2026-11-29T08:38:28Z",
+  "serial": 1795336789,
+  "generatedAt": "2026-11-22T08:39:49Z",
+  "expires": "2026-11-29T08:39:49Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -2957,6 +2957,198 @@
           ],
           "docs": {
             "README.md": "65f607152fb6e8123bbf08c2f45ff890af72591e033b41eda8c95929c38b5d6e"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@shenglin1001/mcp-keeper",
+      "publisher": {
+        "github": "ShengLin1001",
+        "official": false
+      },
+      "authorKeys": [
+        {
+          "keyId": "71b7ee8d10079fe7",
+          "publicKey": "5kE88xs/aKG3HHpy8/Y32xrrl2VxpRHb8w7pNqaL8IE="
+        }
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/ShengLin1001/fuyu-plugin",
+          "commit": "7ef4cda06b73e41db29fb940d6dfd16c1e7be2c8",
+          "engines": {
+            "fuyu": ">=0.3.12-beta.2"
+          },
+          "platforms": [
+            "windows"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.mcp-keeper@1.0.0/shenglin1001-mcp-keeper-1.0.0.fuyu",
+          "sha256": "02aa07e9d2f33e979609500f61aac42dd2de11804abfe1bde6c6eeec8edcdcec",
+          "size": 82669,
+          "publishedAt": "2026-11-22T08:39:49Z",
+          "reviewedAt": "2026-11-22T08:37:57Z",
+          "authorSignature": {
+            "keyId": "71b7ee8d10079fe7",
+            "signature": "oXw5im3PxrrAbkEvWldCH81y220MANbUcBwzDEdCH8ofeHildlPXxbSKo2QAvdjT6o2GOCvkWsrp7gcMcONMDA=="
+          },
+          "manifest": {
+            "displayName": {
+              "zh-CN": "MCP 常驻",
+              "en": "MCP keeper"
+            },
+            "description": {
+              "zh-CN": "让多个 Claude Code 会话共用已安装的本地 MCP 服务。",
+              "en": "Share installed local MCP servers across Claude Code sessions."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "fs",
+              "os",
+              "path",
+              "util"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "clients",
+                "secrets/v1"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "utilities"
+            ],
+            "keywords": [
+              "MCP 常驻",
+              "MCP keeper",
+              "mcp-keeper"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.mcp-keeper@1.0.0/shenglin1001-mcp-keeper-1.0.0.icon.svg",
+            "sha256": "4fe2305e9fe7d472b79560edb84e55092a6c5b9ebece49449ab032447b909103"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.mcp-keeper@1.0.0/shenglin1001-mcp-keeper-1.0.0.screenshot-1.png",
+              "sha256": "919b559d80ef4952711c9f11932ef224d09865a199c83740ebc09c25cc8f8900",
+              "caption": {
+                "zh-CN": "查看和还原共享的本机服务",
+                "en": "View or restore shared local servers"
+              }
+            }
+          ],
+          "docs": {
+            "README.md": "365a6884f088601a135737d4a72f7dced1978b5e613163117ab4e00c90850f94"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@shenglin1001/squeue",
+      "publisher": {
+        "github": "ShengLin1001",
+        "official": false
+      },
+      "authorKeys": [
+        {
+          "keyId": "71b7ee8d10079fe7",
+          "publicKey": "5kE88xs/aKG3HHpy8/Y32xrrl2VxpRHb8w7pNqaL8IE="
+        }
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/ShengLin1001/fuyu-plugin",
+          "commit": "7ef4cda06b73e41db29fb940d6dfd16c1e7be2c8",
+          "engines": {
+            "fuyu": ">=0.3.11"
+          },
+          "platforms": [
+            "windows"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.squeue@1.0.0/shenglin1001-squeue-1.0.0.fuyu",
+          "sha256": "4c6467949cecc5f9e7d6550f874fd67957f56dea8f69a99ba37db646d355ff6c",
+          "size": 81041,
+          "publishedAt": "2026-11-22T08:39:49Z",
+          "reviewedAt": "2026-11-22T08:37:49Z",
+          "authorSignature": {
+            "keyId": "71b7ee8d10079fe7",
+            "signature": "qhgXAuwyvv/uHBvq6RcD9PReQzZpNQd1UC252R8/kTAZ130tyPd1NA/YC3CE1R9JPKwDHfjO1B8v7UTyDRDlCg=="
+          },
+          "manifest": {
+            "displayName": {
+              "zh-CN": "作业队列",
+              "en": "Job queue"
+            },
+            "description": {
+              "zh-CN": "在岛上查看自己的 Slurm 作业和排队状态。",
+              "en": "See your Slurm jobs and queue status on the island."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "clients"
+              ],
+              "optional": [
+                "agents/v1"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "developer"
+            ],
+            "keywords": [
+              "作业队列",
+              "Job queue",
+              "squeue"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.squeue@1.0.0/shenglin1001-squeue-1.0.0.icon.svg",
+            "sha256": "2ebe0375d01a73acf27d70df0950d62936a7ada173cb52c0ea00a1ac81e517fe"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.squeue@1.0.0/shenglin1001-squeue-1.0.0.screenshot-1.png",
+              "sha256": "dbab4003479262c9eafdb05f5a50c6a7e5efba1adfe8a093c504bcfd34c3870a",
+              "caption": {
+                "zh-CN": "按电脑查看 Slurm 作业",
+                "en": "Slurm jobs grouped by computer"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.squeue@1.0.0/shenglin1001-squeue-1.0.0.screenshot-2.png",
+              "sha256": "f2bc2bac255d38dd6a2f2adca0d5dae025d0cacb0cb95a9d0050ca9f03484758",
+              "caption": {
+                "zh-CN": "收起条汇总作业状态",
+                "en": "Collapsed island with queue totals"
+              }
+            }
+          ],
+          "docs": {
+            "README.md": "6ccfd39e00e654cf0cd63df5eedd48b49b8bf7f74c984639d95f9d8fa063a816"
           }
         }
       ]
