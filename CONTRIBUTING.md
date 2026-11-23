@@ -181,7 +181,8 @@ Bundles (`bundles/<id>.json`, the sets the market page installs in one go) are k
 
 - `id`：3–64 个小写字母、数字、点或连字符，文件名必须是 `<id>.json`。
 - `author` 必须是你自己的 GitHub 账号；别人的主题只有原作者能改。
-- `appearance` 只能有这些字段：`appearanceMode`（`classic` / `liquidGlass`）、`fontFamily`（`system` / `pixel`）、`glassIntensity`（25–100）、`opacity`（50–100）、`topFilletRadius`（0–12）、`islandCornerRadius`（16–40）、`islandCornerShape`（`squircle` / `round`）、`taskTextColor`、`pulseColor`、`islandBackgroundColor`（`#rrggbb`）、`pulseBrightness`（50–160）。没写的字段保持用户自己的设置。
+- `appearance` 只能有这些字段：`appearanceMode`（`classic` / `liquidGlass`）、`fontFamily`（`system` / `pixel`）、`glassIntensity`（25–100）、`opacity`（50–100）、`topFilletRadius`（0–12）、`islandCornerRadius`（16–40）、`islandCornerShape`（`squircle` / `round`）、`taskTextColor`、`pulseColor`、`islandBackgroundColor`（`#rrggbb`）、`pulseBrightness`（50–160）、`jellyfishStyle`（水母画风：`vector` 矢量 / `flat` 扁平 / `sticker` 描边 / `mono` 单色 / `neon` 霓虹 / `chunky` 大颗粒 / `fine` 精细）。没写的字段保持用户自己的设置。
+- `jellyfishStyle` 可以不写；写了的话，用户启用主题时岛上的浮屿水母会一起换成这种画风，所以只在画风是主题的一部分时才写（比如像素风的主题配像素水母）。还不认识这个字段的旧版岛屿会忽略它，其余照常生效。
 - 最简单的办法：在岛屿的 设置 → 主题 里调好，导出主题文件，把里面的 `appearance` 抄过来。
 
 PR 检查会校验格式和作者；合并后 `themes.json` 自动更新，岛屿的 设置 → 主题市场 下次打开就能看到。

@@ -73,7 +73,7 @@ test("a clean first release and a poisoned update go through build, review, rele
   assert.equal(result.doc.plugins[0].versions.at(-1).reviewedAt, "2026-11-15T00:00:00Z");
   assert.equal(result.doc.plugins[0].versions.at(-1).url, `https://github.com/TixXin/fuyu-plugins/releases/download/v3.tixxin.market-ci-demo@1.0.0/tixxin-market-ci-demo-1.0.0.fuyu`);
   const { privateKey: indexKey, trust } = ephemeralTrust();
-  const signed = signIndex(indexText(result.doc), indexKey, trust);
+  const signed = signIndex(indexText(result.doc), indexKey, trust, { now: Date.parse("2026-11-16T00:00:00Z") });
   assert.equal(signed.doc.plugins[0].name, DEMO);
 
   const report = buildReport({ plan: { tools: "0".repeat(40), errors: [], notes: [{ name: DEMO, lines: ["First listing: read the whole source."] }], builds }, buildsDir: out, root });
