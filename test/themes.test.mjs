@@ -20,6 +20,11 @@ test("a theme sets the look only, with values the island allows", () => {
   assert.match(themeErrors({ ...good, name: { en: "Dusk" } }).join(), /zh-CN/);
 });
 
+test("a theme may name the jellyfish look, from the looks the island knows", () => {
+  assert.deepEqual(themeErrors({ ...good, appearance: { ...good.appearance, jellyfishStyle: "chunky" } }, "someone.dusk.json"), []);
+  assert.match(themeErrors({ ...good, appearance: { ...good.appearance, jellyfishStyle: "blurry" } }).join(), /jellyfishStyle must be one of vector, flat/);
+});
+
 test("the repository's own themes check out, official ones first in the index", () => {
   const root = fileURLToPath(new URL("..", import.meta.url));
   const { themes, errors } = loadThemes(root);

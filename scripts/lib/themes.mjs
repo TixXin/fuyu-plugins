@@ -14,7 +14,10 @@ const HEX = /^#[0-9a-fA-F]{6}$/;
 const MAX_NAME = 40;
 const MAX_DESCRIPTION = 160;
 
-/** The fields a theme may set, with what each takes (THEME_SETTING_KEYS in the island). */
+/**
+ * The fields a theme may set, with what each takes (THEME_SETTING_KEYS in the island, plus
+ * jellyfishStyle, which the island reads from a theme but keeps outside that list).
+ */
 const FIELDS = {
   appearanceMode: ["classic", "liquidGlass"],
   fontFamily: ["system", "pixel"],
@@ -27,6 +30,7 @@ const FIELDS = {
   pulseColor: "color",
   pulseBrightness: [50, 160],
   islandBackgroundColor: "color",
+  jellyfishStyle: ["vector", "flat", "sticker", "mono", "neon", "chunky", "fine"],
 };
 
 function text(value, max, label, errors, required = true) {
