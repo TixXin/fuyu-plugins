@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795342405,
-  "generatedAt": "2026-11-22T10:13:25Z",
-  "expires": "2026-11-29T10:13:25Z",
+  "serial": 1795396763,
+  "generatedAt": "2026-11-23T01:19:23Z",
+  "expires": "2026-11-30T01:19:23Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -2974,6 +2974,83 @@
         }
       ],
       "versions": [
+        {
+          "version": "1.0.1",
+          "repository": "https://github.com/ShengLin1001/fuyu-plugin",
+          "commit": "ee70d84a9660302a6e32e2156067a734a5f70c80",
+          "engines": {
+            "fuyu": ">=0.3.12-beta.2"
+          },
+          "platforms": [
+            "windows"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.mcp-keeper@1.0.1/shenglin1001-mcp-keeper-1.0.1.fuyu",
+          "sha256": "a7d2529d6ca83fab40515a75320a3ed78dbc1c5e29401113b658d082b80a1785",
+          "size": 84150,
+          "publishedAt": "2026-11-23T01:19:23Z",
+          "reviewedAt": "2026-11-23T01:18:36Z",
+          "authorSignature": {
+            "keyId": "71b7ee8d10079fe7",
+            "signature": "i1jktpKrLiVAWpFIZN4qQtdjejBRHKCZ0xBPKUdGZEzrIQVbrcHBPDXR3kRGCA+DezMv5ky/0LnWGQOwHcsKDQ=="
+          },
+          "manifest": {
+            "displayName": {
+              "zh-CN": "MCP 常驻",
+              "en": "MCP keeper"
+            },
+            "description": {
+              "zh-CN": "让多个 Claude Code 会话共用已安装的本地 MCP 服务。",
+              "en": "Share installed local MCP servers across Claude Code sessions."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "fs",
+              "os",
+              "path",
+              "util"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "clients",
+                "secrets/v1"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "utilities"
+            ],
+            "keywords": [
+              "MCP 常驻",
+              "MCP keeper",
+              "mcp-keeper"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.mcp-keeper@1.0.1/shenglin1001-mcp-keeper-1.0.1.icon.svg",
+            "sha256": "4fe2305e9fe7d472b79560edb84e55092a6c5b9ebece49449ab032447b909103"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.shenglin1001.mcp-keeper@1.0.1/shenglin1001-mcp-keeper-1.0.1.screenshot-1.png",
+              "sha256": "919b559d80ef4952711c9f11932ef224d09865a199c83740ebc09c25cc8f8900",
+              "caption": {
+                "zh-CN": "查看和还原共享的本机服务",
+                "en": "View or restore shared local servers"
+              }
+            }
+          ],
+          "docs": {
+            "README.md": "365a6884f088601a135737d4a72f7dced1978b5e613163117ab4e00c90850f94"
+          }
+        },
         {
           "version": "1.0.0",
           "repository": "https://github.com/ShengLin1001/fuyu-plugin",
