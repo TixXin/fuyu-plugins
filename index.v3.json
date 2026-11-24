@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795524830,
-  "generatedAt": "2026-11-24T12:53:50Z",
-  "expires": "2026-12-01T12:53:50Z",
+  "serial": 1795553264,
+  "generatedAt": "2026-11-24T20:47:44Z",
+  "expires": "2026-12-01T20:47:44Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -2473,6 +2473,121 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.4.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "bd2a15f4be5be81771718b05e61d06526d230d53",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.4.0/fuyu-weather-1.4.0.fuyu",
+          "sha256": "4da1b94d6e61143ca88c4a9d13a4947933659bce93509f98836b8c03f10176c6",
+          "size": 125150,
+          "publishedAt": "2026-11-24T20:47:44Z",
+          "reviewedAt": "2026-11-24T20:46:49Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "天气",
+              "en": "Weather"
+            },
+            "description": {
+              "zh-CN": "在岛上看现在的天气和未来几天的预报，快下雨时提醒你带伞。",
+              "en": "Current weather and the next few days' forecast on the island, with a heads-up before it rains."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [
+              "api.open-meteo.com",
+              "geocoding-api.open-meteo.com",
+              "air-quality-api.open-meteo.com",
+              "photon.komoot.io",
+              "www.nmc.cn",
+              "api.met.no",
+              "wttr.in"
+            ],
+            "inject": {
+              "required": [
+                "commands",
+                "messages/v1"
+              ],
+              "optional": [
+                "http",
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "island.widget/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "refresh",
+                "title": {
+                  "zh-CN": "立即刷新天气",
+                  "en": "Refresh weather now"
+                }
+              }
+            ],
+            "categories": [
+              "information"
+            ],
+            "keywords": [
+              "天气",
+              "天气预报",
+              "气温",
+              "温度",
+              "下雨",
+              "降水",
+              "空气质量",
+              "AQI",
+              "紫外线",
+              "极端天气",
+              "weather",
+              "forecast",
+              "temperature",
+              "rain",
+              "air quality",
+              "uv"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.4.0/fuyu-weather-1.4.0.icon.svg",
+            "sha256": "5cf7854cd8bba8737d6b5610d2dd12b18016d1cff01b79353bc8d4fc912ea391"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.4.0/fuyu-weather-1.4.0.screenshot-1.png",
+              "sha256": "4855c3e4fb8ebc1482a4492123bb4a915540cb06c6ec77fbe0d6e38f95131584",
+              "caption": {
+                "zh-CN": "岛上页面：现在、逐小时和 7 天",
+                "en": "Island page: now, hourly and 7 days"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.4.0/fuyu-weather-1.4.0.screenshot-2.png",
+              "sha256": "e35cfaa3207737c37131680bacf92534bbdfdf3d187f6e3a44555e7bac9b5803",
+              "caption": {
+                "zh-CN": "收起条：天气图标和现在的温度",
+                "en": "Collapsed bar: a weather icon and the current temperature"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "dc245699dded271b019834056d7e866b9b035f6608e49acd2528224db2943023",
+            "README.md": "83a038a60117024ca1bb71b6303e23a6ea10981e6ebcda53d8b6788ce87708d7"
+          }
+        },
         {
           "version": "1.1.0",
           "repository": "https://github.com/TixXin/fuyu",
