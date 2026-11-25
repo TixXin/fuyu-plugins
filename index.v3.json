@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795553264,
-  "generatedAt": "2026-11-24T20:47:44Z",
-  "expires": "2026-12-01T20:47:44Z",
+  "serial": 1795595542,
+  "generatedAt": "2026-11-25T08:32:22Z",
+  "expires": "2026-12-02T08:32:22Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -2969,6 +2969,112 @@
           "icon": {
             "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.world-clock@1.0.0/fuyu-world-clock-1.0.0.icon.svg",
             "sha256": "878b654df398d2db42a7fdee7dd7bc89211b4f8ed7051e08993c9bfcd9c95a1c"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@pdone/fuyu-freecontrol",
+      "publisher": {
+        "github": "pdone",
+        "official": false
+      },
+      "authorKeys": [
+        {
+          "keyId": "41936d42146df186",
+          "publicKey": "eUxx3G+3gjNtR2zuZi3c3nJC8TDMZCYu1d1jmY+52UI="
+        }
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/pdone/fuyu-plugins",
+          "commit": "3398b4d84526e316d67554f1d29980e94b6cde54",
+          "engines": {
+            "fuyu": ">=0.3.13"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.pdone.fuyu-freecontrol@1.0.0/pdone-fuyu-freecontrol-1.0.0.fuyu",
+          "sha256": "a925de73af9da0078b23f7d09d0476a762420ed2b6d8534585904d9060c1cb20",
+          "size": 228400,
+          "publishedAt": "2026-11-25T08:32:22Z",
+          "reviewedAt": "2026-11-25T08:31:39Z",
+          "authorSignature": {
+            "keyId": "41936d42146df186",
+            "signature": "UoJhZkgBiWSxGaq1z1pOV7vMaAGaCPZQtH6jmbBehfOPGgoXK7cFQgg2Ai3IIEEfG+3/v3nmqdlNyWBXZmN6DA=="
+          },
+          "manifest": {
+            "displayName": {
+              "zh-CN": "FreeControl",
+              "en": "FreeControl"
+            },
+            "description": {
+              "zh-CN": "在浮屿中查看和控制本机 Android 设备（需先安装 FreeControl）",
+              "en": "View and control local Android devices from Fuyu (requires FreeControl)"
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [
+              "localhost"
+            ],
+            "inject": {
+              "required": [
+                "clients",
+                "settings"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "developer",
+              "utilities"
+            ],
+            "keywords": [
+              "FreeControl",
+              "Android",
+              "scrcpy",
+              "设备控制",
+              "device control"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.pdone.fuyu-freecontrol@1.0.0/pdone-fuyu-freecontrol-1.0.0.icon.png",
+            "sha256": "4cf34f3df0471d3f5cf61e34568da98173c762186cc2e7334e3f41ebe5a9309e"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.pdone.fuyu-freecontrol@1.0.0/pdone-fuyu-freecontrol-1.0.0.screenshot-1.png",
+              "sha256": "bef423ba6c7449d45c03a4aa816b6439e46e2dc2b20b25da1c19bc377614ee1c",
+              "caption": {
+                "zh-CN": "设备列表与连接控制",
+                "en": "Device list and connection controls"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.pdone.fuyu-freecontrol@1.0.0/pdone-fuyu-freecontrol-1.0.0.screenshot-2.png",
+              "sha256": "a373c3b62dc4d0f6d95fe833e7d3ab8530a7cbc187e4d39ea06d1a705b131bdb",
+              "caption": {
+                "zh-CN": "收起条显示已连接设备数",
+                "en": "Collapsed bar shows connected devices"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "c0a951fe0617f8c1511d9921ee00b71d39c8072505d3bb7574420ec24c3b65ce",
+            "README.md": "49d76d9ab938f239f9cbabfa9aa4fe9d2f27e19d6f36afe1d8a976826090dddd"
           }
         }
       ]
