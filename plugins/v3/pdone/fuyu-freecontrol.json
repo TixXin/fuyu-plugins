@@ -1,0 +1,21 @@
+{
+  "name": "@pdone/fuyu-freecontrol",
+  "path": "freecontrol",
+  "authorKeys": [
+    {
+      "keyId": "41936d42146df186",
+      "publicKey": "eUxx3G+3gjNtR2zuZi3c3nJC8TDMZCYu1d1jmY+52UI="
+    }
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "repository": "https://github.com/pdone/fuyu-plugins",
+      "commit": "3398b4d84526e316d67554f1d29980e94b6cde54",
+      "authorSignature": {
+        "keyId": "41936d42146df186",
+        "signature": "UoJhZkgBiWSxGaq1z1pOV7vMaAGaCPZQtH6jmbBehfOPGgoXK7cFQgg2Ai3IIEEfG+3/v3nmqdlNyWBXZmN6DA=="
+      }
+    }
+  ]
+}
