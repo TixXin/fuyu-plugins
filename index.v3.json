@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795606819,
-  "generatedAt": "2026-11-25T11:40:19Z",
-  "expires": "2026-12-02T11:40:19Z",
+  "serial": 1795647263,
+  "generatedAt": "2026-11-25T22:54:23Z",
+  "expires": "2026-12-02T22:54:23Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -503,6 +503,98 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.2.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "221c092c40346271c939f745b97604c894fc9a26",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.2.0/fuyu-countdown-1.2.0.fuyu",
+          "sha256": "bafd836d53b630d294214324d1c6518c7ad092eb0935cb4883f2f48a45998c76",
+          "size": 93145,
+          "publishedAt": "2026-11-25T22:54:23Z",
+          "reviewedAt": "2026-11-25T22:53:24Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "倒数日",
+              "en": "Day counter"
+            },
+            "description": {
+              "zh-CN": "记着生日、纪念日和截止日，每年自动续上，收起条上一眼看到还剩几天。",
+              "en": "Keeps track of birthdays, anniversaries and deadlines year after year, with the days left on the collapsed bar."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "crypto",
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [],
+              "optional": [
+                "messages/v1",
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "productivity",
+              "utilities"
+            ],
+            "keywords": [
+              "倒数日",
+              "倒计时",
+              "纪念日",
+              "生日",
+              "截止日",
+              "还有几天",
+              "countdown",
+              "days until",
+              "anniversary",
+              "birthday",
+              "deadline"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.2.0/fuyu-countdown-1.2.0.icon.svg",
+            "sha256": "5fd85958462a057fa956bc2c5d8bfc944087c633c84dffb3a8e973b595e37910"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.2.0/fuyu-countdown-1.2.0.screenshot-1.png",
+              "sha256": "8d57ebffeb3ba2304e37e4edee238a28af44f325b38beb49c0cbd2bc43f42003",
+              "caption": {
+                "zh-CN": "岛上页面：置顶的日子和其他日子",
+                "en": "Island page: the pinned date and the rest"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.2.0/fuyu-countdown-1.2.0.screenshot-2.png",
+              "sha256": "e193f534a044e061cb950649421dae35b5f26d37ff6cefb4ed23ca9c44e771d2",
+              "caption": {
+                "zh-CN": "收起条：还剩几天，可以带上名称",
+                "en": "Collapsed bar: days left, with the name if you like"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "4e548c741b023f3e4646f559329e2fcfec8214f91fa9b00f2c2247a9a504776a",
+            "README.md": "61010f0764040ef7637f20c10981b873839c4e4a5110856496df53b1cd814f94"
+          }
+        },
         {
           "version": "1.1.1",
           "repository": "https://github.com/TixXin/fuyu",
@@ -1066,6 +1158,109 @@
       ]
     },
     {
+      "name": "@fuyu/image-host",
+      "publisher": {
+        "github": "TixXin",
+        "official": true
+      },
+      "authorKeys": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "be044dc58d49c9a2d58e0b7b64fd157cb1b584ff",
+          "engines": {
+            "fuyu": ">=0.3.12-beta.2"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.image-host@1.0.0/fuyu-image-host-1.0.0.fuyu",
+          "sha256": "a8eb8d69b460d58fa230dc2faf2a8aa35826a911801708814f46f0baab5c91c0",
+          "size": 225669,
+          "publishedAt": "2026-11-25T22:54:23Z",
+          "reviewedAt": "2026-11-25T22:53:24Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "截图图床",
+              "en": "Image host"
+            },
+            "description": {
+              "zh-CN": "把截图传到你自己的 S3 兼容存储（R2、S3、OSS、COS 或 MinIO），并复制链接。",
+              "en": "Uploads a screenshot to your own S3-compatible storage (R2, S3, OSS, COS or MinIO) and copies the link."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "crypto",
+              "fs",
+              "path"
+            ],
+            "network": [
+              "*.r2.cloudflarestorage.com",
+              "*.amazonaws.com",
+              "*.aliyuncs.com",
+              "*.myqcloud.com",
+              "localhost"
+            ],
+            "inject": {
+              "required": [
+                "http",
+                "screenshot.actions",
+                "secrets/v1"
+              ],
+              "optional": [
+                "clipboard/v1",
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "settings.section/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "utilities",
+              "productivity"
+            ],
+            "keywords": [
+              "图床",
+              "截图",
+              "上传",
+              "链接",
+              "对象存储",
+              "image host",
+              "screenshot",
+              "upload",
+              "S3",
+              "R2",
+              "OSS",
+              "MinIO"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.image-host@1.0.0/fuyu-image-host-1.0.0.icon.svg",
+            "sha256": "2e79d2104a78a17dbd623f6d980e91bbc4ae993ed737d211db50f5615685e7d6"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.image-host@1.0.0/fuyu-image-host-1.0.0.screenshot-1.png",
+              "sha256": "86dd12d81b56ba0cf477c08fcfb6945f3f3442083c2758bf0903c8ad89b541c2",
+              "caption": {
+                "zh-CN": "设置：服务地址、桶、密钥和链接格式；密钥存在系统凭据里",
+                "en": "Settings: endpoint, bucket, keys and link format; the keys live in the system credential store"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "a24590aef41db151af9abcc44b2372a5dc3edb9dc5d285e6049046d424b227d3",
+            "README.md": "f031f1f8288fbed8d2e6d74c4b7f98584c696ca5815d265dc42d19dfa6db9dc8"
+          }
+        }
+      ]
+    },
+    {
       "name": "@fuyu/launcher",
       "publisher": {
         "github": "TixXin",
@@ -1243,6 +1438,95 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.3.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "cb09ef7221798a82a0721c8610850aacfab649d0",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.now-playing@1.3.0/fuyu-now-playing-1.3.0.fuyu",
+          "sha256": "8826980cac660d9c4989c94f97cdc7edaabedcf24be44ee4791ac1b2a4a1063c",
+          "size": 38601,
+          "publishedAt": "2026-11-25T22:54:23Z",
+          "reviewedAt": "2026-11-25T22:53:24Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "换歌提示",
+              "en": "Track change notice"
+            },
+            "description": {
+              "zh-CN": "换歌时在岛上弹一下歌名和歌手，不用切过去看。",
+              "en": "Shows the song title and artist on the island when the track changes."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "commands",
+                "media/v1",
+                "messages/v1"
+              ],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "show",
+                "title": {
+                  "zh-CN": "立即提示当前歌曲",
+                  "en": "Show the current song"
+                }
+              }
+            ],
+            "categories": [
+              "media"
+            ],
+            "keywords": [
+              "换歌",
+              "切歌",
+              "歌名",
+              "歌曲",
+              "音乐",
+              "正在播放",
+              "now playing",
+              "music",
+              "song",
+              "track",
+              "media"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.now-playing@1.3.0/fuyu-now-playing-1.3.0.icon.svg",
+            "sha256": "d19e2c82fddb9bdff03abdb8251e0c897ad5b7fe3a07ed89895302ee9f0ec3c7"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.now-playing@1.3.0/fuyu-now-playing-1.3.0.screenshot-1.png",
+              "sha256": "519ed116a98e99602d7e29ca37a9854e2303e5a4557c418dfa7ea8990412b683",
+              "caption": {
+                "zh-CN": "换歌时岛上弹出的提示：封面、歌名、歌手和播放软件，带上一首、暂停、下一首",
+                "en": "The notice on the island when the track changes: cover, title, artist and player, with previous, pause and next"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "b8cb5f14bf33daf0d134bc02c39bffc3ca84913104e5bfee9885ee3ca432ea53",
+            "README.md": "6b770ad0b5a3ab2e76deac3a505389c5d9693176aa8a29b8d3334392bdde7415"
+          }
+        },
         {
           "version": "1.2.0",
           "repository": "https://github.com/TixXin/fuyu",
@@ -1859,6 +2143,102 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.1.2",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "6961e033c4962730a94752640ed33c6bf7982cf3",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.system-monitor@1.1.2/fuyu-system-monitor-1.1.2.fuyu",
+          "sha256": "a3976f6c5c395b8f3a29e62f63aee9b0b45cec26270525fe27f4c706152627ce",
+          "size": 175812,
+          "publishedAt": "2026-11-25T22:54:23Z",
+          "reviewedAt": "2026-11-25T22:53:24Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "系统监控",
+              "en": "System monitor"
+            },
+            "description": {
+              "zh-CN": "在岛上看 CPU、GPU、内存、网速、电池和最占资源的程序，读数偏高时收起条会变色提醒。",
+              "en": "CPU, GPU, memory, network, battery and the busiest programs on the island; the bar changes color when readings run high."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "fs",
+              "os",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [],
+              "optional": []
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "utilities",
+              "information"
+            ],
+            "keywords": [
+              "系统监控",
+              "性能",
+              "任务管理器",
+              "活动监视器",
+              "CPU",
+              "GPU",
+              "内存",
+              "网速",
+              "电池",
+              "温度",
+              "system monitor",
+              "performance",
+              "memory",
+              "RAM",
+              "network speed",
+              "battery",
+              "task manager"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.system-monitor@1.1.2/fuyu-system-monitor-1.1.2.icon.svg",
+            "sha256": "e8a219d5721a4fb6b7889986b10ec4c640d06f64e17615b1ba90d42cd6f7f07f"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.system-monitor@1.1.2/fuyu-system-monitor-1.1.2.screenshot-1.png",
+              "sha256": "f8d44b7357471b215ddb692fb07ecc155386d27a488da113a9d941d20b060359",
+              "caption": {
+                "zh-CN": "岛上页面：CPU、GPU、内存、网速和最占资源的程序",
+                "en": "Island page: CPU, GPU, memory, network and the busiest programs"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.system-monitor@1.1.2/fuyu-system-monitor-1.1.2.screenshot-2.png",
+              "sha256": "520fa1ce3280108cc81ef9ee6b5e507411a0595390dd6c378fa0138e9fedf5e6",
+              "caption": {
+                "zh-CN": "收起条：CPU 和内存占用",
+                "en": "Collapsed bar: CPU and memory use"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "e66ca84e0464df6377b75b7cd0792faa02f0a3f18d3e51174f126a5e3180b242",
+            "README.md": "149d68e4127d409e471fe4592626f5b8137ad44f44c1d8e7a267c9f1ea204ee2"
+          }
+        },
         {
           "version": "1.1.1",
           "repository": "https://github.com/TixXin/fuyu",
