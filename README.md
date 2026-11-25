@@ -6,6 +6,7 @@
 
 - **提交插件 / Submit a plugin**：见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 - **报告插件问题 / Report a plugin**：[开一个 issue](../../issues/new/choose)。
+- **插件平台的底座 / The base under the plugin platform**：[tauri-cordis](https://github.com/TixXin/tauri-cordis)（MIT）。这个市场用的清单校验、包格式、索引校验和版本审核，同一套代码在那边开源，别的 Tauri 应用也能用来搭自己的市场。The manifest checks, package format, index verification and version review this market runs on are open source there, for any Tauri app that wants a market of its own.
 
 ## 仓库结构
 
