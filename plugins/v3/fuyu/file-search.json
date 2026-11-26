@@ -1,0 +1,11 @@
+{
+  "name": "@fuyu/file-search",
+  "path": "plugins/v3/official/file-search",
+  "versions": [
+    {
+      "version": "1.1.0",
+      "repository": "https://github.com/TixXin/fuyu",
+      "commit": "43a6b1a538e1a031598b8dbabcc4efcc4059271b"
+    }
+  ]
+}
