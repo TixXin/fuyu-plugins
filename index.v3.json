@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795687771,
-  "generatedAt": "2026-11-26T10:09:31Z",
-  "expires": "2026-12-03T10:09:31Z",
+  "serial": 1795692463,
+  "generatedAt": "2026-11-26T11:27:43Z",
+  "expires": "2026-12-03T11:27:43Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
