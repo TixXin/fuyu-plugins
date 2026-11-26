@@ -1,8 +1,8 @@
 {
   "format": 3,
-  "serial": 1795647263,
-  "generatedAt": "2026-11-25T22:54:23Z",
-  "expires": "2026-12-02T22:54:23Z",
+  "serial": 1795687771,
+  "generatedAt": "2026-11-26T10:09:31Z",
+  "expires": "2026-12-03T10:09:31Z",
   "plugins": [
     {
       "name": "@fuyu/alarm",
@@ -12,6 +12,123 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.2.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "43a6b1a538e1a031598b8dbabcc4efcc4059271b",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.alarm@1.2.0/fuyu-alarm-1.2.0.fuyu",
+          "sha256": "a4c051727c2cb26500244d4de398a6929d9ea636b1da9fe8cebaadab19d3859b",
+          "size": 131961,
+          "publishedAt": "2026-11-26T10:09:31Z",
+          "reviewedAt": "2026-11-26T10:08:26Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "闹钟",
+              "en": "Alarm"
+            },
+            "description": {
+              "zh-CN": "到点在岛上响铃提醒，可以按星期重复，没睡醒就贪睡几分钟。",
+              "en": "Rings on the island at the time you set, repeats on the weekdays you pick, and lets you snooze."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "crypto",
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [
+                "commands",
+                "messages/v1"
+              ],
+              "optional": [
+                "reminders/v1"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "island.runner/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "dismiss",
+                "title": {
+                  "zh-CN": "停止闹钟响铃",
+                  "en": "Dismiss ringing alarm"
+                }
+              },
+              {
+                "id": "snooze",
+                "title": {
+                  "zh-CN": "闹钟贪睡",
+                  "en": "Snooze ringing alarm"
+                }
+              }
+            ],
+            "categories": [
+              "productivity",
+              "utilities"
+            ],
+            "keywords": [
+              "闹钟",
+              "闹铃",
+              "起床",
+              "提醒",
+              "贪睡",
+              "alarm",
+              "alarm clock",
+              "wake up",
+              "reminder",
+              "snooze"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.alarm@1.2.0/fuyu-alarm-1.2.0.icon.svg",
+            "sha256": "aaa303ed86d5d08eb91e194c88b49ba851d5a7497aa1ccba119e74926ea0f390"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.alarm@1.2.0/fuyu-alarm-1.2.0.screenshot-1.png",
+              "sha256": "33e2ca09f18afd3c071b19b43db79ef134e841fb17844dfaeb70af49c27e0275",
+              "caption": {
+                "zh-CN": "岛上页面：添加闹钟，看全部闹钟",
+                "en": "Island page: add alarms and see them all"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.alarm@1.2.0/fuyu-alarm-1.2.0.screenshot-2.png",
+              "sha256": "b3fbd293353f0ec6026e141dc588704c36a68de79d441673a2d5bcf61381cb0d",
+              "caption": {
+                "zh-CN": "收起条：可以常驻显示下一次闹钟",
+                "en": "Collapsed bar: can always show the next alarm"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.alarm@1.2.0/fuyu-alarm-1.2.0.screenshot-3.png",
+              "sha256": "c8a4d5b92c095890b9317cb2ad9a0088ae06b89464d2849daae1ab07450bc518",
+              "caption": {
+                "zh-CN": "到点在岛上响铃，可以贪睡",
+                "en": "Rings on the island, with snooze"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "89a79163870e5b7ba6a3ef30fd83c0f87d8426d4b0cb546d9751bcb91641f237",
+            "README.md": "f33b79118eb8ca3a4532a575de591975fb1376e4570800f23d7799caca4efdb8"
+          }
+        },
         {
           "version": "1.1.1",
           "repository": "https://github.com/TixXin/fuyu",
@@ -504,6 +621,98 @@
       "authorKeys": [],
       "versions": [
         {
+          "version": "1.3.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "43a6b1a538e1a031598b8dbabcc4efcc4059271b",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.3.0/fuyu-countdown-1.3.0.fuyu",
+          "sha256": "4aaeac63e2b7bbb732f05cbacefb717975e3f7f61fd63fb609287db2e87a5b0b",
+          "size": 152737,
+          "publishedAt": "2026-11-26T10:09:31Z",
+          "reviewedAt": "2026-11-26T10:08:26Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "倒数日",
+              "en": "Day counter"
+            },
+            "description": {
+              "zh-CN": "记着生日、纪念日和截止日，每年自动续上，收起条上一眼看到还剩几天。",
+              "en": "Keeps track of birthdays, anniversaries and deadlines year after year, with the days left on the collapsed bar."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "crypto",
+              "fs",
+              "path"
+            ],
+            "network": [],
+            "inject": {
+              "required": [],
+              "optional": [
+                "messages/v1",
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [],
+            "categories": [
+              "productivity",
+              "utilities"
+            ],
+            "keywords": [
+              "倒数日",
+              "倒计时",
+              "纪念日",
+              "生日",
+              "截止日",
+              "还有几天",
+              "countdown",
+              "days until",
+              "anniversary",
+              "birthday",
+              "deadline"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.3.0/fuyu-countdown-1.3.0.icon.svg",
+            "sha256": "5fd85958462a057fa956bc2c5d8bfc944087c633c84dffb3a8e973b595e37910"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.3.0/fuyu-countdown-1.3.0.screenshot-1.png",
+              "sha256": "548db04ee55b0899d03dca9c72f965be22ef0557413f8506decec8463f9b8d04",
+              "caption": {
+                "zh-CN": "岛上页面：置顶的日子和其他日子",
+                "en": "Island page: the pinned date and the rest"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.countdown@1.3.0/fuyu-countdown-1.3.0.screenshot-2.png",
+              "sha256": "e193f534a044e061cb950649421dae35b5f26d37ff6cefb4ed23ca9c44e771d2",
+              "caption": {
+                "zh-CN": "收起条：还剩几天，可以带上名称",
+                "en": "Collapsed bar: days left, with the name if you like"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "51fca1f17a401889e89c5a4f0c89dab213cecddd5d9e83083c8c0a4042cc425a",
+            "README.md": "61010f0764040ef7637f20c10981b873839c4e4a5110856496df53b1cd814f94"
+          }
+        },
+        {
           "version": "1.2.0",
           "repository": "https://github.com/TixXin/fuyu",
           "commit": "221c092c40346271c939f745b97604c894fc9a26",
@@ -976,6 +1185,108 @@
       ]
     },
     {
+      "name": "@fuyu/file-search",
+      "publisher": {
+        "github": "TixXin",
+        "official": true
+      },
+      "authorKeys": [],
+      "versions": [
+        {
+          "version": "1.1.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "43a6b1a538e1a031598b8dbabcc4efcc4059271b",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.file-search@1.1.0/fuyu-file-search-1.1.0.fuyu",
+          "sha256": "b0e835e0cbed03cbc941aafe482241ac70f0e67acfd6ccfcf316c6d242261108",
+          "size": 111411,
+          "publishedAt": "2026-11-26T10:09:31Z",
+          "reviewedAt": "2026-11-26T10:08:26Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "文件搜索",
+              "en": "File search"
+            },
+            "description": {
+              "zh-CN": "按快捷键按文件名搜索电脑上的文件：Windows 用 Everything，macOS 用 Spotlight。",
+              "en": "Press a shortcut and search every file on your computer by name: Everything on Windows, Spotlight on macOS."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "child_process",
+              "fs",
+              "os",
+              "path"
+            ],
+            "network": [
+              "www.voidtools.com"
+            ],
+            "inject": {
+              "required": [],
+              "optional": [
+                "island",
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "open",
+                "title": {
+                  "zh-CN": "打开文件搜索",
+                  "en": "Open File search"
+                },
+                "keybinding": "Ctrl+Alt+F"
+              }
+            ],
+            "categories": [
+              "productivity",
+              "utilities"
+            ],
+            "keywords": [
+              "文件搜索",
+              "搜索文件",
+              "找文件",
+              "Everything",
+              "Spotlight",
+              "file search",
+              "find file",
+              "search files"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.file-search@1.1.0/fuyu-file-search-1.1.0.icon.svg",
+            "sha256": "6dc0bd7414833769cfa26c070c0231c278be8bc688b467cb5449d5a8abc7bc2d"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.file-search@1.1.0/fuyu-file-search-1.1.0.screenshot-1.png",
+              "sha256": "261bfe73935a31d3278e03f26f2ef739ffc7e4c5094c5b121b7f7940df795228",
+              "caption": {
+                "zh-CN": "输入即出结果，回车打开，旁边的按钮打开所在文件夹",
+                "en": "Results as you type; Enter opens a file, the button beside it opens its folder"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "6b710610ab665df96f6e17adc94e9d4cd51618ce5cccb53820fd2d872f8c0e73",
+            "README.md": "0fddeebf9c440c9870fd2058a8f53f808c5ecabb4db5db1fdfef765be1fcd7a8"
+          }
+        }
+      ]
+    },
+    {
       "name": "@fuyu/github-issues",
       "publisher": {
         "github": "TixXin",
@@ -983,6 +1294,115 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.2.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "43a6b1a538e1a031598b8dbabcc4efcc4059271b",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.github-issues@1.2.0/fuyu-github-issues-1.2.0.fuyu",
+          "sha256": "cfdbd87a8bea60fcec2057c5a72233bac54b23e04b5313c11cdc7a6c79937657",
+          "size": 192829,
+          "publishedAt": "2026-11-26T10:09:31Z",
+          "reviewedAt": "2026-11-26T10:08:26Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "GitHub Issues",
+              "en": "GitHub Issues"
+            },
+            "description": {
+              "zh-CN": "在岛上看你关注的 GitHub 仓库还有哪些没关的 issue，按仓库分好组。",
+              "en": "See the open issues of the GitHub repositories you follow, grouped by repository, right on the island."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [
+              "api.github.com"
+            ],
+            "inject": {
+              "required": [
+                "commands",
+                "messages/v1"
+              ],
+              "optional": [
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "refresh",
+                "title": {
+                  "zh-CN": "立即刷新",
+                  "en": "Refresh now"
+                }
+              }
+            ],
+            "categories": [
+              "developer"
+            ],
+            "keywords": [
+              "GitHub",
+              "issue",
+              "issues",
+              "工单",
+              "问题",
+              "仓库",
+              "开源",
+              "repository",
+              "repo",
+              "bug tracker"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.github-issues@1.2.0/fuyu-github-issues-1.2.0.icon.svg",
+            "sha256": "99a0cf60672d196b276081127555cfaa8beb7caae26858a752146cc3d8dd20bc"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.github-issues@1.2.0/fuyu-github-issues-1.2.0.screenshot-1.png",
+              "sha256": "f593e5491e49267b169bdcf0a5317d0fbfd9140b624789e908abc8a270efb1b2",
+              "caption": {
+                "zh-CN": "岛上页面：按仓库分组的未关闭 issue",
+                "en": "Island page: open issues grouped by repository"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.github-issues@1.2.0/fuyu-github-issues-1.2.0.screenshot-2.png",
+              "sha256": "46dc2ec30988f058002fea6a45acb03295398fa55a6877d4d38b852c2d97e80b",
+              "caption": {
+                "zh-CN": "收起条：未关闭 issue 的总数",
+                "en": "Collapsed bar: the total number of open issues"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.github-issues@1.2.0/fuyu-github-issues-1.2.0.screenshot-3.png",
+              "sha256": "c8f43338e1fcb66a7c228a436b1fb2f94e52c4a06e93b614fcd27265d62e13c9",
+              "caption": {
+                "zh-CN": "设置：添加要关注的仓库",
+                "en": "Settings: add the repositories you follow"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "4c3ff0211a58aa881d2070233dba2c9394af98cae81695a5d35143cf271d9f68",
+            "README.md": "ec6d72fa3713962e2248bebf5a8afbae37004cb6a5f7d84247b43d1d7f63a429"
+          }
+        },
         {
           "version": "1.1.0",
           "repository": "https://github.com/TixXin/fuyu",
@@ -2136,6 +2556,126 @@
       ]
     },
     {
+      "name": "@fuyu/stock",
+      "publisher": {
+        "github": "TixXin",
+        "official": true
+      },
+      "authorKeys": [],
+      "versions": [
+        {
+          "version": "1.3.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "e83ebcc338743a2481ea01d6e098d226d0f599d2",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.stock@1.3.0/fuyu-stock-1.3.0.fuyu",
+          "sha256": "b3ae82ecda31bc89834083d1a53a2e23c7b304bca780901a8eecc7ae358f1757",
+          "size": 172044,
+          "publishedAt": "2026-11-26T10:09:31Z",
+          "reviewedAt": "2026-11-26T10:08:26Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "自选股",
+              "en": "Stocks"
+            },
+            "description": {
+              "zh-CN": "在岛上看自选股：A 股、港股、美股在收起条上轮流显示，点开看完整列表。",
+              "en": "Your watchlist on the island: A-share, Hong Kong and US quotes take turns on the bar, the page lists them all."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [
+              "push2.eastmoney.com",
+              "searchapi.eastmoney.com",
+              "qt.gtimg.cn",
+              "web.ifzq.gtimg.cn"
+            ],
+            "inject": {
+              "required": [
+                "commands"
+              ],
+              "optional": [
+                "http",
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "refresh",
+                "title": {
+                  "zh-CN": "立即刷新行情",
+                  "en": "Refresh quotes now"
+                }
+              }
+            ],
+            "categories": [
+              "information"
+            ],
+            "keywords": [
+              "股票",
+              "自选股",
+              "行情",
+              "股价",
+              "A股",
+              "港股",
+              "美股",
+              "指数",
+              "基金",
+              "ETF",
+              "stock",
+              "stocks",
+              "watchlist",
+              "quote",
+              "market",
+              "index"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.stock@1.3.0/fuyu-stock-1.3.0.icon.svg",
+            "sha256": "9abd68cd698126be2fadc7d2fa5223ab4ee4da6746f5c5852983b90d77786147"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.stock@1.3.0/fuyu-stock-1.3.0.screenshot-1.png",
+              "sha256": "a1a30491e24260c287f89d5ffe44d0497f87a3b0f8ccb1337b49e5313857c24b",
+              "caption": {
+                "zh-CN": "岛上页面：自选股的现价和涨跌",
+                "en": "Island page: price and change for each stock on the watchlist"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.stock@1.3.0/fuyu-stock-1.3.0.screenshot-2.png",
+              "sha256": "196483dce76befa4b610c8fff4b6d10c0bd427cb0a8bb08049d4720cda113800",
+              "caption": {
+                "zh-CN": "收起条：自选股轮流显示涨跌幅",
+                "en": "Collapsed bar: the watchlist takes turns showing its change"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "a59069ac15b1cffe94577d1d3b57749301210b4c782c679cb4c7add77c8ba2e3",
+            "README.md": "b370cc1a58c0306c68f6875a7af397a99a6d251c0f9c3fcc5d48b7f1c94ad5cf"
+          }
+        }
+      ]
+    },
+    {
       "name": "@fuyu/system-monitor",
       "publisher": {
         "github": "TixXin",
@@ -2853,6 +3393,121 @@
       },
       "authorKeys": [],
       "versions": [
+        {
+          "version": "1.5.0",
+          "repository": "https://github.com/TixXin/fuyu",
+          "commit": "43a6b1a538e1a031598b8dbabcc4efcc4059271b",
+          "engines": {
+            "fuyu": ">=0.3.10"
+          },
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.5.0/fuyu-weather-1.5.0.fuyu",
+          "sha256": "4a0e5c0fe03cd0e90417e2e4cc86352b0cbed6b34d1a4f651eb69c2045613690",
+          "size": 127958,
+          "publishedAt": "2026-11-26T10:09:31Z",
+          "reviewedAt": "2026-11-26T10:08:26Z",
+          "manifest": {
+            "displayName": {
+              "zh-CN": "天气",
+              "en": "Weather"
+            },
+            "description": {
+              "zh-CN": "在岛上看现在的天气和未来几天的预报，快下雨时提醒你带伞。",
+              "en": "Current weather and the next few days' forecast on the island, with a heads-up before it rains."
+            },
+            "license": "MIT",
+            "nodeApis": [
+              "fs",
+              "path"
+            ],
+            "network": [
+              "api.open-meteo.com",
+              "geocoding-api.open-meteo.com",
+              "air-quality-api.open-meteo.com",
+              "photon.komoot.io",
+              "www.nmc.cn",
+              "api.met.no",
+              "wttr.in"
+            ],
+            "inject": {
+              "required": [
+                "commands",
+                "messages/v1"
+              ],
+              "optional": [
+                "http",
+                "settings"
+              ]
+            },
+            "provides": [],
+            "replaces": [],
+            "slots": [
+              "island.page/v1",
+              "island.collapsed/v1",
+              "island.widget/v1",
+              "settings.section/v1"
+            ],
+            "commands": [
+              {
+                "id": "refresh",
+                "title": {
+                  "zh-CN": "立即刷新天气",
+                  "en": "Refresh weather now"
+                }
+              }
+            ],
+            "categories": [
+              "information"
+            ],
+            "keywords": [
+              "天气",
+              "天气预报",
+              "气温",
+              "温度",
+              "下雨",
+              "降水",
+              "空气质量",
+              "AQI",
+              "紫外线",
+              "极端天气",
+              "weather",
+              "forecast",
+              "temperature",
+              "rain",
+              "air quality",
+              "uv"
+            ]
+          },
+          "icon": {
+            "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.5.0/fuyu-weather-1.5.0.icon.svg",
+            "sha256": "5cf7854cd8bba8737d6b5610d2dd12b18016d1cff01b79353bc8d4fc912ea391"
+          },
+          "screenshots": [
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.5.0/fuyu-weather-1.5.0.screenshot-1.png",
+              "sha256": "cbbbd7daf00a49ec3afab8f769e40464840451c639b0f55e229cd5205d47a4b2",
+              "caption": {
+                "zh-CN": "岛上页面：现在、逐小时和 7 天",
+                "en": "Island page: now, hourly and 7 days"
+              }
+            },
+            {
+              "url": "https://github.com/TixXin/fuyu-plugins/releases/download/v3.fuyu.weather@1.5.0/fuyu-weather-1.5.0.screenshot-2.png",
+              "sha256": "e35cfaa3207737c37131680bacf92534bbdfdf3d187f6e3a44555e7bac9b5803",
+              "caption": {
+                "zh-CN": "收起条：天气图标和现在的温度",
+                "en": "Collapsed bar: a weather icon and the current temperature"
+              }
+            }
+          ],
+          "docs": {
+            "CHANGELOG.md": "ae9d881c1de44982c20b4f6bc46a9527c43c8e718b7ea4bd5582af13be0a4c0f",
+            "README.md": "83a038a60117024ca1bb71b6303e23a6ea10981e6ebcda53d8b6788ce87708d7"
+          }
+        },
         {
           "version": "1.4.0",
           "repository": "https://github.com/TixXin/fuyu",
